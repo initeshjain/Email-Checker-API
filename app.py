@@ -20,4 +20,6 @@ def em(a):
     return emck(a)
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    from waitress import serve
+    # app.run(debug=False)
+    serve(app, host="0.0.0.0", port=80)
